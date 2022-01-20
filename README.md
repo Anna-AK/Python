@@ -1,2 +1,3 @@
 # Python
-my practics by Python
+my practics by Python 
+tascs from SkillFactory
