@@ -1,8 +1,8 @@
 # у пользователя запрашивается количество билетов, которые он хочет приобрести на мероприятие.
-count_Ticets = int(input("Hello! \nPlease enter number of tickets: "))
+count_ticets = int(input("Hello! \nPlease enter number of tickets: "))
 total = 0;
 i = 1
-while i <= count_Ticets :
+while i <= count_ticets :
     age = int(input(f"Enter age of {i} client: "))
 #  Если посетителю конференции от 18 до 25 лет стоимость билета 990 руб.
     if 18 <= age <= 25:
@@ -14,7 +14,7 @@ while i <= count_Ticets :
     i += 1
 
 # Если человек регистрирует больше трёх человек на конференцию, то дополнительно получает 10% скидку на полную стоимость заказа.
-if count_Ticets >= 3:
+if count_ticets >= 3:
     total *= 0.9
 
 # В результате программы выводится сумма к оплате.
