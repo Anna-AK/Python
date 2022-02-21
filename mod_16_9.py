@@ -90,4 +90,3 @@ class Guest(Person):
 
     def guestInfo(self):
         return f'{self.name}, г. {self.town}, статус гостя - {self.status}'
-
