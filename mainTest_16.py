@@ -28,7 +28,7 @@ list_guests = [
 
 # Выводим список гостей на консоль в формате: Иван Петров, г. Москва, статус "Наставник"
 print("Список на корпоратив:")
-x=0
+
 for x in list_guests:
     guest = Guest(x['name'], x['town'], x['status'])
     print(guest.guestInfo())
