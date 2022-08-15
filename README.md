@@ -1,6 +1,7 @@
 # Python
 my practics by Python 
 tascs from SkillFactory
+Практические задания по курсу от SkillFactory
 
 practic_deposit - mod.12.7.3 (расчет выгодности вклада)
 
@@ -20,3 +21,4 @@ apy.py          - mod.19.7.2  (реализация и набор тестов A
 /withSelenium 	- mod.25.5.1 (реализация тестов с использованием библиотеки Selenium)
 
 
+/Labirint_testing - итоговая работа (функциональное тестирование по методу черного ящика сайта интернет-магазина Лабиринт)
