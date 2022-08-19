@@ -68,7 +68,7 @@ def test_third_panel_soc_net(setup_browser):
     for i in range(len(elem_menu)):
         point_menu = elem_menu[i]
         elem_link = labirint_third_panel_soc_net[i]
-        print(f'i = {i}, point = {point_menu}, link = {elem_link}')
+        # print(f'i = {i}, point = {point_menu}, link = {elem_link}')
         page.moving_to_elem_click(THIRD_SOC_NET, point_menu)
         page.switch_to_last_window()
         page.wait_page_loaded()

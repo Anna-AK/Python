@@ -25,6 +25,7 @@ def get_webdriver(param: str):
         # print(f"this is {param}")
         # options = get_firefox_options()
         driver = webdriver.Firefox()        #(options=options)
+
     driver.set_window_size(1300, 900)
     return driver
 
@@ -39,11 +40,11 @@ def get_webdriver(param: str):
 #     # driver.get(url)
 #     yield driver
 #     driver.quit()
-#
+
 @pytest.fixture(scope='function')
 def setup_browser(request):
-    driver = get_webdriver('Chrome')
-    # driver = get_webdriver('Firefox')
+    # driver = get_webdriver('Chrome')
+    driver = get_webdriver('Firefox')
     if request.cls is not None:
         request.cls.driver = driver
     yield driver

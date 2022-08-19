@@ -33,8 +33,9 @@ CART_CLEAR = (By.CSS_SELECTOR, 'div.text-regular.empty-basket-link')        #С�
 CART_RECLEAR = (By.CSS_SELECTOR, 'div.empty-basket-link a')                 #Ссылка *Восстановить удаленное*
 CART_CHECK = (By.CSS_SELECTOR, 'button.start-checkout-js')                  #Ссылка *Перейти к оформлению*
 CART_CLEAR_TEXT = (By.CSS_SELECTOR, '#step1-default span.g-alttext-head')   #Текст в пустой корзине
-CART_CHECK_TOTAL = (By.CSS_SELECTOR, 'span.footer__desktop-total-value')           #Итог при оформлении заказа
+CART_CHECK_TOTAL = (By.CSS_SELECTOR, '#basket-default-sumprice-discount')           #'span.footer__desktop-total-value')           #Итог при оформлении заказа
 CART_PROD_NUM = (By.CSS_SELECTOR, '#basket-step1-default input')            #Поле ввода кол-ва
+# CART_PROD_NUM_TOTAL = (By.CSS_SELECTOR, '#basket-default-prod-count2')      #В корзине общее количество товаров
 CART_PROD_TO_ORD = (By.CSS_SELECTOR, '#basket-step1-default a.fave')        #Добавление в Отложенные
 CART_ORDER = (By.CSS_SELECTOR, '#ui-id-5')
 
@@ -53,6 +54,14 @@ SOC_NET_WIND = (By.CSS_SELECTOR, 'div.popup-window-content.two-rows span.b-heade
 
 # locators second panel
 POINT_BOOKS = (By.CSS_SELECTOR, 'li:nth-child(1).b-toggle.analytics-click-js')
+BOOKS_SCND_A = (By.CSS_SELECTOR, '#header-genres > div > ul >li.b-menu-second-item > a')
+BOOKS_SCND_SOST_3 = (By.CSS_SELECTOR, '#header-genres div ul li:nth-child(4) span')
+BOOKS_SCND_SOST_4 = (By.CSS_SELECTOR, '#header-genres div ul li:nth-child(5) span')
+BOOKS_SCND_SOST_5 = (By.CSS_SELECTOR, '#header-genres div ul li:nth-child(6) span')
+BOOKS_SCND_SOST_POINTS_3 = (By.CSS_SELECTOR, '#header-genres div li:nth-child(4) li.b-menu-second-item a')
+BOOKS_SCND_SOST_POINTS_4 = (By.CSS_SELECTOR, '#header-genres div li:nth-child(5) li.b-menu-second-item a')
+BOOKS_SCND_SOST_POINTS_5 = (By.CSS_SELECTOR, '#header-genres div li:nth-child(6) li.b-menu-second-item a')
+BOOKS_SCND_FOOT = (By.CSS_SELECTOR, '#header-genres li.b-menu-second-item-m-additional a')
 POINT_BEST = (By.CSS_SELECTOR, 'li:nth-child(2) a.b-header-b-menu-e-text')
 POINT_SCHOOL = (By.CSS_SELECTOR, 'li:nth-child(3) a.b-header-b-menu-e-text')
 SCHOOL_PREDM = (By.XPATH, '//*[@id="header-school"]//a[@class="b-sub-menu-sub-title"]')
@@ -69,7 +78,7 @@ POINT_MORE = (By.CSS_SELECTOR, 'span.top-link-main')
 MORE_POINTS = (By.XPATH, '//*[@id="header-more"]//li')             #'#header-more ul.b-menu-second-container li')
 
 # locators carusels
-BOOKS_BLOCKS = (By.CSS_SELECTOR, books_blocs_loc)
+BOOKS_BLOCKS = (By.CSS_SELECTOR, 'div.product-padding')
 BLOCKS_LINKS = (By.CSS_SELECTOR, 'div.main-block-carousel.bestsellers a.block-link-title')
 PROD_BOOKS_BLOCKS = (By.CSS_SELECTOR, 'div.main-block-carousel.bestsellers a.cover')      #books_blocs_loc + ' ' + books_blocs_titles_loc)
 PRICE_BOOKS_BLOCKS = (By.CSS_SELECTOR, 'div.main-block-carousel.bestsellers span.price-val span')
