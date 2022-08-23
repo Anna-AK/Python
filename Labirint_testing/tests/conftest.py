@@ -29,23 +29,23 @@ def get_webdriver(param: str):
     driver.set_window_size(1300, 900)
     return driver
 
-# @pytest.fixture(scope='function', params = ['Chrome', 'Firefox'])
-# def setup_browser(request):
-#     param = str(request.param)
-#     # print(param)
-#     driver = get_webdriver(param)
-#     # url = main_page_link
-#     if request.cls is not None:
-#         request.cls.driver = driver
-#     # driver.get(url)
-#     yield driver
-#     driver.quit()
-
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', params = ['Chrome', 'Firefox'])
 def setup_browser(request):
-    # driver = get_webdriver('Chrome')
-    driver = get_webdriver('Firefox')
+    param = str(request.param)
+    # print(param)
+    driver = get_webdriver(param)
+    # url = main_page_link
     if request.cls is not None:
         request.cls.driver = driver
+    # driver.get(url)
     yield driver
     driver.quit()
+
+# @pytest.fixture(scope='function')
+# def setup_browser(request):
+#     # driver = get_webdriver('Chrome')
+#     driver = get_webdriver('Firefox')
+#     if request.cls is not None:
+#         request.cls.driver = driver
+#     yield driver
+#     driver.quit()

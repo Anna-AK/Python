@@ -157,6 +157,7 @@ def test_logo_discount(setup_browser):
         assert element, 'Элемент "Скидка" не отображается!'
         assert page.get_relative_link(), 'Ссылка "Скидка" не работает'
 
+@pytest.mark.xfail
 def test_labirint_auten(setup_browser):
         """ Проверка авторизации зарегистрированного пользователя (позитивный сценарий). Запись cookies в файл"""
         page = TestingPage(setup_browser)
