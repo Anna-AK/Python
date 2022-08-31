@@ -41,16 +41,17 @@ def test_img_link(setup_browser):
         assert page.get_relative_link() == link_url, f'Переход по ссылке {link_text} не сработал'
         page.wait_page_loaded()
 
+        element = page.is_visible(IMAGE_FIRST_FOUND_FILD)
+        str_find = element.get_attribute('value')
+        assert link_text == str_find, f'Поиск по {link_text} не сработал'
+
         element_links = page.are_visible(IMAGES_LINKS_VKL)
-        element_links_src = page.is_visible((IMAGES_LINKS_VKL[0], IMAGES_LINKS_VKL[1]+'  img'))
-        link_src = element_links_src.get_attribute('src')
 
         page.moving_to_elem_click(element_links[0])
         page.wait_page_loaded()
 
         element = page.is_visible(IMG_SRC)
         link_src_1 = element.get_attribute('src')
-        # assert link_src_1 == link_src, 'Открылась не та картинка'
 
         page.moving_to_elem_click(ARR_NEXT)
         element = page.is_visible(IMG_SRC)
